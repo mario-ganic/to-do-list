@@ -8,4 +8,5 @@ const inputTextValue = inputText.value;
 const listItem = document.createElement('li');	
 todoList.appendChild(listItem);
 listItem.innerText = inputTextValue;
+inputText.value = '';
 });
