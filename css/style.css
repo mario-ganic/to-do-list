@@ -2,8 +2,35 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
 }
 
-h1{
-	color: teal;
+html, body{
+	height: 100%;
+	background: #fff;
+}
+
+
+main{
+	text-align: center;
+}
+
+ /* ADD ITEMS TO LIST */
+
+#add-todos{
+	margin: 1rem auto;
+	display: flex;
+	justify-content: center;
+	width: 700px;
+}
+
+#addButton {
+	height: 2rem;
+	border: 1px solid black;
+	margin-left: 1rem;
+	width: 6rem;
+}
+
+input{
+	text-align: center;
 }
