@@ -15,12 +15,17 @@ main{
 	text-align: center;
 }
 
- /* ADD ITEMS TO LIST */
+/*INPUT*/
+
+input{
+	height: 2rem;
+	text-align: center;
+}
 
 #add-todos{
 	margin: 1rem auto;
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
 	align-items: center;
   max-width: 900px;
 }
@@ -28,11 +33,20 @@ main{
 #addButton {
 	height: 2rem;
 	border: 1px solid black;
-	margin-left: 1rem;
+	width: 6rem;
+	margin-left: 5px;
+}
+
+
+/*LIST*/
+
+button{
+	height: 2rem;
+	border: 1px solid red;
 	width: 6rem;
 }
 
-input{
-	height: 2rem;
-	text-align: center;
+
+li{
+	list-style: none;
 }
