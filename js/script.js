@@ -3,34 +3,51 @@
 const addButton = document.querySelector('#addButton');
 const body = document.querySelector('body');
 const todoList = document.querySelector('#todoList');
-const inputText = document.querySelector('input')
+const inputText = document.querySelector('input');
 
-// ADD ITEM TO LIST
-addButton.addEventListener('click', createListElement);
 
-// CREATE LIST ITEM
+// CREATE TO DO
 
 function createListElement() {
-	  		const inputTextValue = inputText.value;
+	if(inputText.value.length > 0){
         const listItem = document.createElement('li');
         todoList.appendChild(listItem);
-        listItem.innerText = inputTextValue;
+        listItem.innerText = inputText.value;
         createButton(listItem);
+        checkButton(listItem);
         inputText.value = '';
+}
 }
 
 // CREATE DELETE AND CHECK BUTTONS
-function createButton(e) {
-    const deleteButton = document.createElement('button');
-    const checkButton = document.createElement('button');
+function createButton(element) {
+		const deleteButton = document.createElement('button');
     deleteButton.innerText = 'Delete';
-    checkButton.innerText = 'Completed';
-    e.appendChild(deleteButton);
-    e.appendChild(checkButton);
-    deleteButton.addEventListener('click', (e) => {
-        e.target.parentElement.remove();
-    })
-    checkButton.addEventListener('click', (e) => {
-        e.target.parentElement.classList.add('marked');
+    element.appendChild(deleteButton);
+    deleteButton.addEventListener('click', (element) => {
+        element.target.parentElement.remove();
     })
 }
+
+function checkButton(e) {
+	const checkButton = document.createElement('button');
+	checkButton.innerText = 'Completed';
+  e.appendChild(checkButton);
+   checkButton.addEventListener('click', (e) => {
+        e.target.parentElement.classList.toggle('marked');
+    })
+}
+
+
+// ADD LIST WITH ENTER
+
+function addListWithEnter(event) {
+    if (inputText.value.length > 0 && event.keyCode === 13) {
+        createListElement();
+    }
+}
+
+// ADD ITEM TO LIST USING CLICK AND ENTER
+addButton.addEventListener('click', createListElement);
+
+inputText.addEventListener('keypress', addListWithEnter);

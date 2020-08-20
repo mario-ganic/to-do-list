@@ -5,14 +5,22 @@
 	font-family: 'Montserrat', sans-serif;
 }
 
-html, body{
+html{
 	height: 100%;
-	background: #fff;
+}
+
+body{
+background: rgb(115,211,236);
+background: linear-gradient(137deg, rgba(115,211,236,0.65) 1%, rgba(238,92,203,0.12)); 
 }
 
 
 main{
 	text-align: center;
+}
+
+#title{
+	margin-top: 1rem;
 }
 
 /*INPUT*/
@@ -40,10 +48,18 @@ input{
 
 /*LIST*/
 
+#todos{
+	margin: auto;
+	max-width: 800px;
+	border: 1px solid black;
+	text-align: center;
+}
+
 button{
 	height: 2rem;
 	border: 1px solid red;
 	width: 6rem;
+	margin: 1rem;
 }
 
 
@@ -54,3 +70,5 @@ li{
 .marked {
 	text-decoration: line-through;
 }
+
+/*BUTTONS*/
