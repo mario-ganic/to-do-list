@@ -36,8 +36,8 @@ header {
 /*INPUT*/
 
 input{
-	height: 2rem;
-	width: 20rem;
+	height: 3rem;
+	width: 18rem;
 	text-align: center;
 }
 
@@ -50,7 +50,7 @@ input{
 }
 
 #addButton {
-	height: 2rem;
+	height: 3rem;
 	border: 1px solid black;
 	width: 6rem;
 	margin-left: 5px;
