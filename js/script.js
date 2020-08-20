@@ -1,7 +1,6 @@
 // SELECTORS
 
 const addButton = document.querySelector('#addButton');
-const body = document.querySelector('body');
 const todoList = document.querySelector('#todoList');
 const inputText = document.querySelector('input');
 
@@ -11,16 +10,20 @@ const inputText = document.querySelector('input');
 function createListElement() {
 	if(inputText.value.length > 0){
         const listItem = document.createElement('li');
-        todoList.appendChild(listItem);
+        const todoDiv = document.createElement('div');
+				todoList.appendChild(todoDiv);
+				todoDiv.appendChild(listItem);
+				todoDiv.classList.add('todoDiv');
         listItem.innerText = inputText.value;
-        createButton(listItem);
-        checkButton(listItem);
+        createButton(todoDiv);
+        checkButton(todoDiv);
         inputText.value = '';
 }
 }
 
 // CREATE DELETE AND CHECK BUTTONS
 function createButton(element) {
+
 		const deleteButton = document.createElement('button');
     deleteButton.innerText = 'Delete';
     element.appendChild(deleteButton);
@@ -34,9 +37,10 @@ function checkButton(e) {
 	checkButton.innerText = 'Completed';
   e.appendChild(checkButton);
    checkButton.addEventListener('click', (e) => {
-        e.target.parentElement.classList.toggle('marked');
+   			e.target.parentElement.classList.toggle('marked');
     })
 }
+
 
 
 // ADD LIST WITH ENTER
