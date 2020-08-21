@@ -15,31 +15,34 @@ function createListElement() {
 				todoDiv.appendChild(listItem);
 				todoDiv.classList.add('todoDiv');
         listItem.innerText = inputText.value;
-        createButton(todoDiv);
-        checkButton(todoDiv);
+         checkButton(todoDiv);
+        deleteButton(todoDiv);
+       
         inputText.value = '';
 }
 }
 
 // CREATE DELETE AND CHECK BUTTONS
-function createButton(element) {
-
-		const deleteButton = document.createElement('button');
-    deleteButton.innerText = 'Delete';
-    element.appendChild(deleteButton);
-    deleteButton.addEventListener('click', (element) => {
-        element.target.parentElement.remove();
-    })
-}
-
 function checkButton(e) {
 	const checkButton = document.createElement('button');
-	checkButton.innerText = 'Completed';
+	checkButton.innerText = 'Finished';
+	checkButton.classList.add('checkBtn');
   e.appendChild(checkButton);
    checkButton.addEventListener('click', (e) => {
    			e.target.parentElement.classList.toggle('marked');
     })
 }
+
+function deleteButton(element) {
+		const deleteButton = document.createElement('button');
+    deleteButton.innerText = 'Delete';
+    element.appendChild(deleteButton);
+    deleteButton.classList.add('delBtn');
+    deleteButton.addEventListener('click', (element) => {
+        element.target.parentElement.remove();
+    })
+}
+
 
 
 
