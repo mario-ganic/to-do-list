@@ -19,7 +19,7 @@ html{
 body{
 /*background: var(--main-color); */
 /*background: linear-gradient(137deg, var(--main-color) 1%, var(--scnd-color)); */
-background: #fff;
+background: linear-gradient(orange, rgb(105, 187, 241))
 }
 
 
@@ -31,9 +31,27 @@ main{
 /*HEADER*/
 
 header {
-	background: linear-gradient(137deg, var(--main-color) 1%, var(--scnd-color));;
-	padding: 2rem;
+	/* background: linear-gradient(137deg, var(--main-color) 1%, var(--scnd-color));; */
+  padding: 1rem;
+  background: #41ade5;
+  color: #fff;
+  position: relative;
+  z-index: 1;
 }
+
+header:after {
+	background: inherit;
+	bottom: 0;
+	content: '';
+	display: block;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	right: 0;
+	transform: skewY(-1.6deg);
+	transform-origin: 100%;
+	z-index: -1;
+  }
 
 h1{
 	letter-spacing: 1px;
@@ -43,6 +61,7 @@ h1{
 /*INPUT*/
 
 input{
+	margin-top: 2.2rem;
 	height: 3rem;
 	width: 15rem;
 	text-align: center;
@@ -57,10 +76,11 @@ input:focus{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-  max-width: 900px;
+    max-width: 900px;
 }
 
 #addButton {
+	margin-top: 2.2rem;
 	height: 3rem;
 	border: 1px solid black;
 	width: 6rem;
