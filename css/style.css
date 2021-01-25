@@ -1,44 +1,41 @@
-*{
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	font-family: 'Montserrat', sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
-
-:root{
-	--main-color: rgba(115,211,236,0.65);
-	--third-color: rgba(115,211,236,0.15);
-	--scnd-color: rgba(238,92,203,0.12);
+:root {
+  --main-color: rgba(115, 211, 236, 0.65);
+  --third-color: rgba(115, 211, 236, 0.15);
+  --scnd-color: rgba(238, 92, 203, 0.12);
 }
 
-html{
-	height: 100%;
+html {
+  height: 100%;
 }
 
-body{
-/*background: var(--main-color); */
-/*background: linear-gradient(137deg, var(--main-color) 1%, var(--scnd-color)); */
-background: linear-gradient(orange, rgb(105, 187, 241))
+body {
+  /*background: var(--main-color); */
+  /*background: linear-gradient(137deg, var(--main-color) 1%, var(--scnd-color)); */
+  background: linear-gradient(orange, rgb(105, 187, 241));
 }
 
-
-
-main{
-	text-align: center;
+main {
+  text-align: center;
 }
 
 /*HEADER*/
 
 header {
-	/* background: linear-gradient(137deg, var(--main-color) 1%, var(--scnd-color));; */
+  /* background: linear-gradient(137deg, var(--main-color) 1%, var(--scnd-color));; */
   padding: 1rem;
   background: #41ade5;
   color: #fff;
-  position: relative;
-  z-index: 1;
+  /* position: relative; */
+  /* z-index: 1; */
 }
-
+/* 
 header:after {
 	background: inherit;
 	bottom: 0;
@@ -51,87 +48,86 @@ header:after {
 	transform: skewY(-1.5deg);
 	transform-origin: 100%;
 	z-index: -1;
-  }
+  } */
 
-h1{
-	letter-spacing: 1px;
+h1 {
+  letter-spacing: 1px;
 }
-
 
 /*INPUT*/
 
-input{
-	margin-top: 2.2rem;
-	height: 3rem;
-	width: 15rem;
-	text-align: center;
+input {
+  margin-top: 2.2rem;
+  height: 3rem;
+  width: 15rem;
+  text-align: center;
 }
 
-input:focus{
-	background: var(--scnd-color)
+input:focus {
+  background: var(--scnd-color);
 }
 
-#add-todos{
-	margin: 1rem auto;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-    max-width: 900px;
+#add-todos {
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
 }
 
 #addButton {
-	margin-top: 2.2rem;
-	height: 3rem;
-	border: 1px solid black;
-	width: 6rem;
-	margin-left: 5px;
+  margin-top: 2.2rem;
+  height: 3rem;
+  border: 1px solid black;
+  width: 6rem;
+  margin-left: 5px;
 }
 
-#addButton:hover{
-	opacity: 0.8;
-	border: 1px solid orange;
+#addButton:hover {
+  opacity: 0.8;
+  border: 1px solid orange;
 }
 
 /*LIST*/
 
-ul{
-	width: 100%;
+ul {
+  width: 100%;
 }
 
 .todoDiv {
-	width: 90%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	min-height: 6rem;
-	background: var(--third-color);
-	margin: 1rem;
-	box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.75);
-	transition: opacity 0.2s;	
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 6rem;
+  background: var(--third-color);
+  margin: 1rem;
+  box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.75);
+  transition: opacity 0.2s;
 }
 
-#todos{
-	margin: auto;
-	max-width: 900px;
+#todos {
+  margin: auto;
+  max-width: 900px;
 }
 
-li{
-	list-style: none;
-	width: 80%;
-	padding: 1rem;
-	text-align: left;
+li {
+  list-style: none;
+  width: 80%;
+  padding: 1rem;
+  text-align: left;
 }
 
 .marked {
-	opacity: 0.5;
+  opacity: 0.5;
 }
 
 /*BUTTONS*/
 
-.checkBtn, .delBtn{
-	height: 2rem;
-	border: 1px solid red;
-	width: 7rem;
-	margin: 5px;
+.checkBtn,
+.delBtn {
+  height: 2rem;
+  border: 1px solid red;
+  width: 7rem;
+  margin: 5px;
 }
-
