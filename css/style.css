@@ -17,7 +17,6 @@ html {
 
 body {
   background: var(--main-color);
-  background: red;
   /*background: linear-gradient(137deg, var(--main-color) 1%, var(--scnd-color)); */
   /* background: linear-gradient(orange, rgb(105, 187, 241)); */
 }
