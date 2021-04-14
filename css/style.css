@@ -28,7 +28,7 @@ main {
 /*HEADER*/
 
 header {
-  /* background: linear-gradient(137deg, var(--main-color) 1%, var(--scnd-color));; */
+  background: linear-gradient(137deg, var(--main-color) 1%, var(--scnd-color));
   padding: 1rem;
   /* background: #41ade5; */
   color: #fff;
