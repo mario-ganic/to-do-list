@@ -29,7 +29,7 @@ header {
   background: linear-gradient(137deg, var(--main-color) 1%, var(--scnd-color));
   padding: 1rem;
   /* background: #41ade5; */
-  color: rgb(116, 38, 2);
+  color: rgb(116, 38, 8);
   /* position: relative; */
   /* z-index: 1; */
 }
